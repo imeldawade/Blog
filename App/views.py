@@ -4,7 +4,6 @@ from flask_login import login_required, current_user
 from .models import Post
 from .import db
 import json 
-# import jsonify
 
 views = Blueprint('views', __name__)
 
