@@ -10,7 +10,8 @@ DB_NAME = "database.db"
 def create_app():
     app = Flask(__name__)
     app.config['SECRET_KEY'] = 'b7d785fa9433c46ac4a746758f34f826'
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://postgres:access@localhost/blogs'
+    # app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://postgres:access@localhost/blogs'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'os.environ.get("DATABASE_URL")os.environ.get("DATABASE_URL")'
     db.init_app(app)
 
     from .views import views
