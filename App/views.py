@@ -1,4 +1,4 @@
-from crypt import methods
+
 from flask import Blueprint, flash, render_template, request, jsonify
 from flask_login import login_required, current_user
 from .models import Post
